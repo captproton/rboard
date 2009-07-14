@@ -45,7 +45,6 @@ CONFIG = Rails::Initializer.run do |config|
   config.gem 'RedCloth'
   config.gem 'highline'
   config.gem 'coderay'
-  config.gem 'ultraviolet', :lib => "uv"
   
   # lol actionwebservice
   config.frameworks -= [:action_web_service]

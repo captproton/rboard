@@ -36,7 +36,7 @@ THEMES_DIRECTORY = File.join(RAILS_ROOT, "public", "themes")
 STANDALONE = true
 
 ## Set this to false if you don't want to use thinking sphinx.
-SEARCHING = true
+SEARCHING = false
 
 
 CONFIG = Rails::Initializer.run do |config|

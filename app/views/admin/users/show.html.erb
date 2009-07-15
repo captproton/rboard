@@ -17,7 +17,7 @@
       <b><%= t(:Date_joined) %></b> <%= @user.created_at.strftime(date_display) %> <br />
       <b><%= t(:Posts) %></b> <%= @user.posts.size %>, <%= t(:about) %> <%= @posts_percentage %>% <%= t(:of_all_posts) %><br />
       <b><%= t(:IP) %></b> <%= @user.ip %><br />
-      <b><%= t(:Bans) %></b> <%= @user %> <%= t(:has_been_banned, :count => @user.ban_times) %>. <br />
+      <b><%= t(:Bans) %></b> <%= @user %>  banned <%= @user.ban_times %> times. <br />
       <% if !@user.ban_time.nil? && @user.ban_time > Time.now %>
         <h2><%= @user %> <%= t(:is_currently_banned) %></h2>
         <%= t(:user_was_banned_by, :banned_by => @user.banned_by) %> <%= t(:ban_expires_in, :expiry => time_ago_in_words(@user.ban_time)) %>.<br /><br />

@@ -111,7 +111,7 @@ class TopicsController < ApplicationController
   end
     
   def create_ip
-    @ip = Ip.find_or_create_by_ip(request.remote_addr)
+    @ip = Ip.find_or_create_by_ip(request.remote_ip)
     IpUser.create(:ip => @ip, :user => current_user)
   end
   

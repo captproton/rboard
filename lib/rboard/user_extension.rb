@@ -34,13 +34,7 @@ module Rboard::UserExtension
       has_many :topics
       has_many :unread_messages, :class_name => "Message", :foreign_key => "to_id", :conditions => ["to_read = ? AND to_deleted = ?", false, false]
 
-      has_attached_file :avatar, 
-                        :styles => { :thumbnail => "100>" },
-                        :storage => :s3,
-                        :s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
-                        :path => ":attachment/:id/:style.:extension",
-                        :bucket => 'goods.captproton.com'
-                        
+      has_attached_file :avatar, :styles => { :thumbnail => "100>" }
 
 
       belongs_to :banned_by, :class_name => "User", :foreign_key => "banned_by"

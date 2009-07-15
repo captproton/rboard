@@ -12,7 +12,7 @@ coverage
 coverage/*
 config/*.sphinx.conf
 config/deploy.rb
-config/initializers/s3.yml
+config/s3.yml
 config/newrelic.yml
 .gitignore.swp
 public/avatars

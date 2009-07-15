@@ -1,0 +1,11 @@
+development:
+  access_key_id: 0XVAQR64TGCGWZ4W37R2
+  secret_access_key: oZ0WmQLhTvZfraRuAF37yjZbFODHG3KcTWR3qFxQ
+
+test:
+  access_key_id: 0XVAQR64TGCGWZ4W37R2
+  secret_access_key: oZ0WmQLhTvZfraRuAF37yjZbFODHG3KcTWR3qFxQ
+
+production:
+  access_key_id: 0XVAQR64TGCGWZ4W37R2
+  secret_access_key: oZ0WmQLhTvZfraRuAF37yjZbFODHG3KcTWR3qFxQ

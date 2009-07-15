@@ -29,7 +29,7 @@ task :install => :environment do
   puts "*" * 100
   puts "Welcome to rBoard's install process."
 
-  puts "Setting admin login, password, and email from admin_setup.rb."
+  puts "Setting admin login, password, and email from admin_setup.yml."
   puts "*" * 100
   login = ENV["LOGIN"] || gets
   password = ENV["PASSWORD"] || gets

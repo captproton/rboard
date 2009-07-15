@@ -1,0 +1,11 @@
+development:
+  access_key_id: amazonKey
+  secret_access_key: amazonSecretKey
+
+test:
+    access_key_id: amazonKey
+    secret_access_key: amazonSecretKey
+
+production:
+    access_key_id: amazonKey
+    secret_access_key: amazonSecretKey

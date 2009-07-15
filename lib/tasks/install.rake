@@ -26,17 +26,15 @@ task :install => :environment do
   establish_connection
   Rake::Task["db:schema:load"].invoke
   
-  puts "*" * 50
+  puts "*" * 100
   puts "Welcome to rBoard's install process."
-  puts "*" * 50
-  login = highline.ask("What would you like your login for the administrator account to be?")
-  
-  password = highline.ask("What would you like your password for this account to be?")
-  
-  email = highline.ask("What is your email address for this account?")
-  
-  login, password, email = [login, password, email].map!(&:strip)
-   
+
+  puts "Setting admin login, password, and email from admin_setup.rb."
+  puts "*" * 100
+  login = ENV["LOGIN"] || gets
+  login = ENV["PASSWORD"] || gets
+  email = ENV["EMAIL"] || gets
+     
    puts "Creating admin user now..."
    administrator = User.new(:login => login, :password => password, :password_confirmation => password, :email => email)
    administrator.identifier = "administrator"

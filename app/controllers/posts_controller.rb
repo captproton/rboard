@@ -43,7 +43,7 @@ class PostsController < ApplicationController
         @post.edits.create(:original_content => @post.text,
                            :current_content => params[:post][:text],
                            :user => current_user, 
-                           :ip => request.`remote_ip`,
+                           :ip => request.remote_ip,
                            :hidden => params[:silent_edit] == "1",
                            :ip => @ip)
         @post.update_attribute("edited_by", current_user)

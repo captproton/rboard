@@ -3,7 +3,7 @@ module ApplicationHelper
   def bbcode(text)
     #cool stuff (well, at least I think so)
     begin
-      text.gsub!(/\[code=?["']?(.*?)["']?\](.*?)\[\/code\]/mis) { "<div class='code'>" << Uv.parse($2, "xhtml", $1, true, "lazy") << "</div>" }
+      ## text.gsub!(/\[code=?["']?(.*?)["']?\](.*?)\[\/code\]/mis) { "<div class='code'>" << Uv.parse($2, "xhtml", $1, true, "lazy") << "</div>" } # I will replace the Uv.parse with your own syntax highlighting call.
     rescue NoMethodError
       text.gsub!(/\[code=?["']?(.*?)["']?\](.*?)\[\/code\]/mis) { "<div class='code'><font color='red'><strong>#{t(:invalid_syntax)}</strong></font></div>" }
     end
